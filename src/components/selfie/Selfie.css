@@ -1,0 +1,256 @@
+.ajuste-camara {
+  margin-top: 5%;
+}
+
+.contenido {
+  min-height: 70vh;
+}
+
+.texto-selfie{
+  padding-top: 15%;
+  line-height: 120%;
+}
+
+.contenedor-texto{
+  padding-bottom: 4rem;
+}
+
+.texto-instrucciones {
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  letter-spacing: 0.005rem;
+  display: block;
+}
+
+.texto-separacion {
+  margin-top: 0.75rem;
+}
+
+@media screen and (orientation:landscape){
+  .contenedor-texto {
+    padding-bottom: 2rem;
+  }
+  #photo-button{
+    width: 55%;
+  }
+}
+
+@media (max-height: 700px) and (orientation:portrait) {
+  .texto-selfie {
+    padding-top: 0;
+  }
+  .contenedor-texto {
+    padding-bottom: 1rem;
+  }
+  .texto-instrucciones {
+    line-height: 20px;
+  }
+}
+
+@media (min-height: 650px) {
+  .contenedor-texto {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-height: 700px) {
+  .contenido {
+      min-height: 74vh;
+  }
+  .texto-instrucciones {
+    line-height: 20px;
+  }
+}
+
+@media (min-height: 750px) {
+  .contenedor-texto {
+    padding-bottom: 1rem;
+  }
+  .texto-instrucciones {
+    line-height: 32px;
+  }
+}
+
+@media (min-height: 800px) {
+  .contenedor-texto {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-height: 900px) {
+  .contenedor-texto {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-height: 950px) {
+  .contenedor-texto {
+    padding-bottom: 9rem;
+  }
+}
+
+@media (min-height: 1000px) {
+  .contenedor-texto {
+    padding-bottom: 14rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .contenedor-texto{
+    padding-bottom: 0.5rem;
+  }
+  .texto-selfie {
+    padding-top: 15%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor-texto {
+    padding-bottom: 2rem;
+  }
+}
+
+.loader {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  display: inline-block;
+  background: linear-gradient(0deg, rgba(244, 238, 237, 0.899) 33%, lime 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+}
+
+.loader3 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: lime;
+  box-shadow: 32px 0 lime, -32px 0 lime;
+  animation: flash 0.5s ease-out infinite alternate;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10%;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #7671719f;
+    box-shadow: 32px 0 #7671719f, -32px 0 lime;
+  }
+
+  50% {
+    background-color: lime;
+    box-shadow: 32px 0 #7671719f, -32px 0 #7671719f;
+  }
+
+  100% {
+    background-color: #7671719f;
+    box-shadow: 32px 0 lime, -32px 0 #7671719f;
+  }
+}
+
+
+video {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+
+:host::ng-deep #canvas{
+  width: 100%;
+  height: 100%;
+  position: "absolute";
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0px;
+  bottom: 0px;
+}
+
+#facevideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.Exclusin-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  object-fit: cover;
+  margin-left: -3px;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: none;
+}
+
+.msg {
+  width:80%;
+  height: 60px;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  letter-spacing: 0.005rem;
+  display: block;
+  font-weight: 800;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.top{
+  top:0;
+  margin-top: 4%;
+}
+
+
+@media screen and (min-device-height:640px) {
+  .top{
+    margin-top: 8%;
+  }
+  .loader3{
+    margin-bottom: 12%;
+  }
+  .msg{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-device-height:740px) {
+  .top{
+    margin-top: 15%;
+  }
+  .loader3{
+    margin-bottom: 20%;
+  }
+  .msg{
+    font-size:22px
+  }
+
+}
