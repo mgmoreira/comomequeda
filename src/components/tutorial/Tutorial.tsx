@@ -16,7 +16,7 @@ const TutorialComponent = () => {
           </Grid>
         )}
         <Grid item xs={12} sm={6} className="pl-0 pr-0 text-center contenedorImagen">
-          <img src='./assets/tutorial_selfie_pink.png' alt="Banco Ciudad" id="fotoVerificado" />
+          <img src='./comomequeda/assets/tutorial_selfie_pink.png' alt="Banco Ciudad" id="fotoVerificado" />
         </Grid>
         <Grid item xs={12} sm={6} className="text-center" id="p-pasos">
           {isLandscape && (

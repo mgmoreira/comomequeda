@@ -5,7 +5,7 @@ import SelfieComponent from './components/selfie/Selfie';
 import HairComponent from './components/hair/Hair';
 import TutorialComponent from './components/tutorial/Tutorial';
 
-import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
+import { BrowserRouter as BrowserRouter, Route, Routes  } from 'react-router-dom';
 import {
   createTheme,
   ThemeProvider,
@@ -29,13 +29,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Router>
+        <BrowserRouter basename="/comomequeda">
           <Routes >
             <Route path="/" element={ <TutorialComponent /> } />
             <Route path="selfie" element={ <SelfieComponent /> } />
             <Route path="hair" element={ <HairComponent /> } />
           </Routes >
-        </Router>
+        </BrowserRouter>
       </div>
     </ThemeProvider>
   );
